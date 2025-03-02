@@ -35,6 +35,23 @@ body{
      
 
 }
+.container.menu-open {
+    background-color: black; 
+    opacity: 100%; 
+}
+
+ 
+@media (max-width: 900px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    .container.menu-open {
+        background-color: black;  
+    }
+}
 #logo{
     margin: 5px 10px;
     width: 250px;
@@ -76,8 +93,9 @@ image-rendering: optimizeQuality;
     border-radius: 5px;
 }
 .nav-toggle:hover {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: rgb(255, 242, 0);
+     
 }
  
 li a{
@@ -226,8 +244,7 @@ li a{
         align-items: flex-start;
         background-color: black;
         opacity: 90%;
-        border-bottom: 2px solid yellow;
-        border-top: 2px solid yellow;
+         
 
     }
     .nav-toggle {

@@ -36,11 +36,29 @@ body{
     opacity: 90%;
     width: 100%;
     position: fixed;
-    backdrop-filter: blur(7px) drop-shadow(2px 2px 2px red);
     z-index: 20;
+    padding: 0;
+    background-color: transparent;  
     
      
+}
 
+.container.menu-open {
+    background-color: black; 
+    opacity: 100%; 
+}
+
+ 
+@media (max-width: 900px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    .container.menu-open {
+        background-color: black;  
+    }
 }
 #logo{
     margin: 5px 10px;
@@ -65,10 +83,11 @@ image-rendering: optimizeQuality;
     padding: 0px 15px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-   
+    
 }
 .nav.hidden {
     display: none; 
+    
 }
 .nav-toggle {
     position: absolute;
@@ -220,6 +239,7 @@ li a{
     .container {
         flex-direction: column;
         align-items: center;
+       
     }
     #logo {
         width: 150px;
@@ -236,18 +256,18 @@ li a{
     .nav.show {
         display: flex;
         align-items: flex-start;
-        background-color: black;
         opacity: 90%;
-        border-bottom: 2px solid yellow;
-        border-top: 2px solid yellow;
-
+        background-color: #000;
+         
     }
     .nav-toggle {
         display: inline-block;    
         margin: 10px;
+        
     }
     .nav li a {
         padding: 10px;
+        
     }
     .slider img {
         width: 100%;
@@ -368,7 +388,7 @@ li a{
 
 @media (max-width : 900px) {
     .gun{
-        width: 28%;
+        width: 38%;
     }
 }
 .model {

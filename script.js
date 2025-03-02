@@ -2,10 +2,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".nav");
     const toggleButton = document.querySelector(".nav-toggle");
-
+    const container = document.querySelector(".container");
+    
     toggleButton.addEventListener("click", () => {
         nav.classList.toggle("show");
-        toggleButton.textContent = nav.classList.contains("show") ? "❌" : "☰";
+        if (nav.classList.contains("show")) {
+            toggleButton.textContent = "✖";
+            container.classList.add("menu-open");  
+        } else {
+            toggleButton.textContent = "☰";
+            container.classList.remove("menu-open");  
+        }
     });
 });
 

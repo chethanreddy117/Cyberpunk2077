@@ -1,12 +1,27 @@
 import { collection } from './data.mjs';
 
+
+const container = document.querySelector('.guns');
+const model = document.querySelector('.model');
+const modelImg = model.querySelector('img');
+const prevBtn = model.querySelector('.prev');
+const nextBtn = model.querySelector('.next');
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".nav");
     const toggleButton = document.querySelector(".nav-toggle");
-
+    const container = document.querySelector(".container");
+    
     toggleButton.addEventListener("click", () => {
         nav.classList.toggle("show");
-        toggleButton.textContent = nav.classList.contains("show") ? "❌" : "☰";
+        if (nav.classList.contains("show")) {
+            toggleButton.textContent = "✖";
+            container.classList.add("menu-open");  
+        } else {
+            toggleButton.textContent = "☰";
+            container.classList.remove("menu-open");  
+        }
     });
 
     document.getElementById("Buynow").addEventListener("click", function () {
@@ -20,15 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function scrollToCommunity() {
-    document.getElementById("COMMUNITY").scrollIntoView({ behavior: "smooth" });
-}
-
-const container = document.querySelector('.guns');
-const model = document.querySelector('.model');
-const modelImg = model.querySelector('img');
-const prevBtn = model.querySelector('.prev');
-const nextBtn = model.querySelector('.next');
+ 
 
 let currentGun = null;
 let currentIndex = 0;
